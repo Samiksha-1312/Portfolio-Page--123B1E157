@@ -1,23 +1,4 @@
 // ==============================
-// Responsive Navbar Toggle
-// ==============================
-const hamburger = document.getElementById("hamburger");
-const navLinksContainer = document.getElementById("nav-links");
-
-hamburger.addEventListener("click", () => {
-  navLinksContainer.classList.toggle("active");
-  hamburger.classList.toggle("open");
-});
-
-// Close menu when a link is clicked (for mobile UX)
-document.querySelectorAll(".nav-links a").forEach(link => {
-  link.addEventListener("click", () => {
-    navLinksContainer.classList.remove("active");
-    hamburger.classList.remove("open");
-  });
-});
-
-// ==============================
 // Smooth Scroll with Offset
 // ==============================
 document.querySelectorAll('.nav-links a').forEach(link => {
@@ -47,7 +28,7 @@ window.addEventListener('scroll', () => {
   let current = '';
 
   sections.forEach(section => {
-    const sectionTop = section.offsetTop - 80; // offset for fixed navbar
+    const sectionTop = section.offsetTop - 80;
     const sectionHeight = section.offsetHeight;
 
     if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
