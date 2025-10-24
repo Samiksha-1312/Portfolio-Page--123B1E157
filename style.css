@@ -13,14 +13,12 @@
   padding: 0;
   box-sizing: border-box;
 }
-html {
-  scroll-behavior: smooth;
-}
 
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--cream);
   color: var(--dark);
+  scroll-behavior: smooth;
 }
 
 /* Navbar */
@@ -57,11 +55,15 @@ header {
   color: white;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
   color: var(--pink);
+  background-color: rgba(201, 173, 167, 0.2);
 }
 
 /* Hero Section */
@@ -74,7 +76,6 @@ header {
   align-items: center;
   text-align: center;
   padding: 0 20px;
-  box-shadow: 0 0 40px rgba(74, 78, 105, 0.5);
 }
 
 .hero h1 {
@@ -88,7 +89,7 @@ header {
   color: var(--pink);
 }
 
-/* Sections */
+/* Section Styles */
 section {
   padding: 60px 10%;
   text-align: center;
@@ -105,12 +106,13 @@ section {
 #about {
   background-color: var(--cream);
   padding: 60px 15%;
-  text-align: justify;
 }
 
 #about p {
   font-size: 1.2rem;
   line-height: 1.8;
+  color: var(--dark);
+  text-align: justify;
 }
 
 /* Education & Projects Containers */
@@ -128,16 +130,16 @@ section {
 .project-card {
   background: #fbf4ff;
   border-radius: 8px;
-  padding: 30px;
-  width: 450px;
-  box-shadow: 0 3px 15px rgba(127, 140, 223, 0.507);
+  padding: 15px;
+  width: 280px;
+  box-shadow: 0 3px 15px rgba(74, 78, 105, 0.25);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .edu-card:hover,
 .project-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 25px rgba(112, 122, 190, 0.74);
+  box-shadow: 0 8px 25px rgba(74, 78, 105, 0.45);
 }
 
 /* Certifications */
@@ -218,33 +220,46 @@ footer {
   box-shadow: 0 -3px 15px rgba(74, 78, 105, 0.5);
 }
 
-/* Scroll Spy Active Link */
-.nav-links a.active {
-  color: var(--pink);
-  border-bottom: 2px solid var(--pink);
-  padding-bottom: 3px;
-  transition: all 0.3s ease;
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-/* Responsive */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive: Horizontal Navbar on Mobile */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px 20px;
   }
 
   .nav-links {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 15px;
-    text-align: center;
+    width: 100%;
+    justify-content: center;
+    background-color: var(--purple); /* optional slightly different shade */
+    padding: 10px 0;
   }
 
-  .edu-card,
-  .project-card {
-    width: 90%;
+  .nav-links li {
+    margin: 0;
   }
 
-  .contact-icons {
-    gap: 30px;
+  .nav-links a {
+    font-size: 0.9rem;
+    padding: 8px 12px;
   }
 }
