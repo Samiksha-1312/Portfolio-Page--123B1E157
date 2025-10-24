@@ -21,7 +21,6 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--cream);
   color: var(--dark);
-  scroll-behavior: smooth;
 }
 
 /* Navbar */
@@ -65,21 +64,7 @@ header {
   color: var(--pink);
 }
 
-/* Hamburger Menu (for mobile) */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.hamburger span {
-  background: white;
-  height: 3px;
-  width: 25px;
-  margin: 3px;
-}
-
-/* Hero */
+/* Hero Section */
 .hero {
   background: linear-gradient(to right, var(--dark), var(--purple));
   color: white;
@@ -103,11 +88,10 @@ header {
   color: var(--pink);
 }
 
-/* Section Styles */
+/* Sections */
 section {
   padding: 60px 10%;
   text-align: center;
-  animation: fadeInUp 1s ease;
   scroll-margin-top: 80px;
 }
 
@@ -121,13 +105,12 @@ section {
 #about {
   background-color: var(--cream);
   padding: 60px 15%;
+  text-align: justify;
 }
 
 #about p {
   font-size: 1.2rem;
   line-height: 1.8;
-  color: var(--dark);
-  text-align: justify;
 }
 
 /* Education & Projects Containers */
@@ -135,7 +118,7 @@ section {
 .projects-grid {
   display: flex;
   justify-content: center;
-  gap: 20px; /* reduced gap */
+  gap: 20px;
   flex-wrap: wrap;
   margin-top: 25px;
 }
@@ -145,8 +128,8 @@ section {
 .project-card {
   background: #fbf4ff;
   border-radius: 8px;
-  padding: 30px; /* smaller padding */
-  width: 450px; /* reduced box size */
+  padding: 30px;
+  width: 450px;
   box-shadow: 0 3px 15px rgba(127, 140, 223, 0.507);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -204,7 +187,7 @@ section {
   box-shadow: 0 0 10px rgba(74, 78, 105, 0.6);
 }
 
-/* ✅ Contact Icons */
+/* Contact Icons */
 .contact-icons {
   display: flex;
   justify-content: center;
@@ -235,20 +218,12 @@ footer {
   box-shadow: 0 -3px 15px rgba(74, 78, 105, 0.5);
 }
 
-/* ✨ Animations */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
+/* Scroll Spy Active Link */
+.nav-links a.active {
+  color: var(--pink);
+  border-bottom: 2px solid var(--pink);
+  padding-bottom: 3px;
+  transition: all 0.3s ease;
 }
 
 /* Responsive */
@@ -258,34 +233,18 @@ footer {
   }
 
   .nav-links {
-    display: none;
+    display: flex;
     flex-direction: column;
-    background: var(--purple);
-    width: 100%;
+    gap: 15px;
     text-align: center;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: flex;
   }
 
   .edu-card,
   .project-card {
-    width: 90%; /* full width on mobile */
+    width: 90%;
   }
 
   .contact-icons {
     gap: 30px;
   }
-}
-
-.nav-links a.active {
-  color: var(--pink);
-  border-bottom: 2px solid var(--pink);
-  padding-bottom: 3px;
-  transition: all 0.3s ease;
 }
