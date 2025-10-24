@@ -4,7 +4,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     e.preventDefault();
     const targetId = link.getAttribute('href');
     const target = document.querySelector(targetId);
-    const offset = 100;
+    const offset = 70;
     const position = target.offsetTop - offset;
     window.scrollTo({ top: position, behavior: 'smooth' });
   });
@@ -18,7 +18,7 @@ window.addEventListener('scroll', () => {
   let current = '';
   
   sections.forEach(section => {
-    const top = section.offsetTop - 120;
+    const top = section.offsetTop - 90;
     const height = section.offsetHeight;
     if (window.scrollY >= top && window.scrollY < top + height) {
       current = section.getAttribute('id');
