@@ -39,7 +39,7 @@ window.addEventListener('scroll', () => {
   });
 });
 
-// ✅ Make sure mail link opens email app
+
 document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
   link.addEventListener('click', e => {
     // Allow default mailto behavior (important!)
