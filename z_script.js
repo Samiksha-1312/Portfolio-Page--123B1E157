@@ -1,12 +1,18 @@
-// Smooth scroll
+// Smooth scroll for navbar links only
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', e => {
-    e.preventDefault();
     const targetId = link.getAttribute('href');
-    const target = document.querySelector(targetId);
-    const offset = 70;
-    const position = target.offsetTop - offset;
-    window.scrollTo({ top: position, behavior: 'smooth' });
+    
+    // Only smooth-scroll if the link is an in-page anchor (starts with '#')
+    if (targetId.startsWith('#')) {
+      e.preventDefault();
+      const target = document.querySelector(targetId);
+      if (target) {
+        const offset = 70;
+        const position = target.offsetTop - offset;
+        window.scrollTo({ top: position, behavior: 'smooth' });
+      }
+    }
   });
 });
 
@@ -30,5 +36,13 @@ window.addEventListener('scroll', () => {
     if(link.getAttribute('href') === `#${current}`) {
       link.classList.add('active'); 
     }
+  });
+});
+
+// ✅ Make sure mail link opens email app
+document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+  link.addEventListener('click', e => {
+    // Allow default mailto behavior (important!)
+    window.location.href = link.getAttribute('href');
   });
 });
