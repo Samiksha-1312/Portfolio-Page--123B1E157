@@ -1,15 +1,15 @@
 ```css
 :root{
-  --bg: #F8F4EE;
-  --card: #FFFDFB;
+  --bg: #F8F4EE;          /* cream background */
+  --card: #FFFDFB;        /* off-white cards */
 
-   --primary:#9E2A2B;
-  --primary-light:#B84042;
+  --primary: #780000;     /* your deep red */
+  --primary-light: #A61E1E;
 
-  --text: #433D3A;
+  --text: #2F2A28;        /* dark brown-gray */
   --muted: #7A716C;
 
-  --border: #E7D9D0;
+  --border: #E6D9D1;
 }
 *{
   margin:0;
