@@ -1,237 +1,166 @@
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```javascript
+// ================================
+// Smooth Scroll
+// ================================
 
-<title>Samiksha Kalekar | Portfolio</title>
+document.querySelectorAll('a[href^="#"]').forEach(link => {
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  link.addEventListener('click', function(e){
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    e.preventDefault();
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    const target =
+    document.querySelector(this.getAttribute('href'));
 
-<link rel="stylesheet" href="style.css">
-</head>
+    if(target){
 
-<body>
+      target.scrollIntoView({
+        behavior: 'smooth'
+      });
 
-<header>
-    <nav class="navbar">
-        <div class="logo">Samiksha Kalekar</div>
+    }
 
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+  });
 
-<section class="hero">
+});
 
-    <div class="hero-content">
+// ================================
+// Active Nav Link
+// ================================
 
-        <p class="hero-tag">
-            FRONTEND DEVELOPER • ENGINEERING STUDENT
-        </p>
+const sections =
+document.querySelectorAll("section");
 
-        <h1>
-            Samiksha<br>
-            Kalekar.
-        </h1>
+const navLinks =
+document.querySelectorAll(".nav-links a");
 
-        <p class="hero-description">
-            Building clean, responsive and user-focused web experiences.
-            Passionate about frontend development, design and creating
-            meaningful digital experiences.
-        </p>
+window.addEventListener("scroll", () => {
 
-        <div class="hero-buttons">
-            <a href="#projects" class="btn">
-                View Projects
-            </a>
+  let current = "";
 
-            <a href="resume.pdf" class="btn-outline">
-                Resume
-            </a>
-        </div>
+  sections.forEach(section => {
 
-    </div>
+    const sectionTop =
+    section.offsetTop - 150;
 
-</section>
+    const sectionHeight =
+    section.clientHeight;
 
-<section id="about">
+    if(window.scrollY >= sectionTop){
 
-    <h2 class="section-title">
-        about me.
-    </h2>
+      current = section.getAttribute("id");
 
-    <div class="about-container">
+    }
 
-        <div class="about-text">
+  });
 
-            <p>
-                Hi, I'm Samiksha — a frontend developer and
-                engineering student passionate about building
-                elegant and user-friendly web experiences.
-            </p>
+  navLinks.forEach(link => {
 
-            <p>
-                I enjoy transforming ideas into responsive
-                interfaces using HTML, CSS, JavaScript and React.
-            </p>
+    link.classList.remove("active");
 
-            <p>
-                Currently learning advanced frontend development,
-                DSA and modern web technologies while preparing
-                for software engineering opportunities.
-            </p>
+    if(
+      link.getAttribute("href") ===
+      `#${current}`
+    ){
 
-        </div>
+      link.classList.add("active");
 
-        <div class="about-image">
+    }
 
-            <img
-            src="https://placehold.co/400x500"
-            alt="Samiksha">
+  });
 
-        </div>
+});
 
-    </div>
+// ================================
+// Navbar Shadow on Scroll
+// ================================
 
-</section>
+const header =
+document.querySelector("header");
 
-<section id="projects">
+window.addEventListener("scroll", () => {
 
-    <h2 class="section-title">
-        projects.
-    </h2>
+  if(window.scrollY > 50){
 
-    <div class="projects-grid">
+    header.style.boxShadow =
+    "0 10px 30px rgba(0,0,0,.08)";
 
-        <div class="project-card">
+  }
 
-            <img
-            src="https://placehold.co/500x300"
-            alt="Project">
+  else{
 
-            <h3>Weather App</h3>
+    header.style.boxShadow =
+    "none";
 
-            <p>
-                Real-time weather application using APIs
-                and JavaScript.
-            </p>
+  }
 
-            <div class="project-links">
-                <a href="#">Live Demo</a>
-                <a href="#">GitHub</a>
-            </div>
+});
 
-        </div>
+// ================================
+// Reveal Animation
+// ================================
 
-        <div class="project-card">
+const observer =
+new IntersectionObserver((entries)=>{
 
-            <img
-            src="https://placehold.co/500x300"
-            alt="Project">
+  entries.forEach(entry=>{
 
-            <h3>Portfolio Website</h3>
+    if(entry.isIntersecting){
 
-            <p>
-                Responsive personal portfolio with
-                modern UI and smooth animations.
-            </p>
+      entry.target.classList.add("show");
 
-            <div class="project-links">
-                <a href="#">Live Demo</a>
-                <a href="#">GitHub</a>
-            </div>
+    }
 
-        </div>
+  });
 
-    </div>
+},{
+  threshold:0.15
+});
 
-</section>
+document
+.querySelectorAll(
+'.project-card, .skill-card, .contact-card, .about-text, .about-image'
+)
+.forEach(el => {
 
-<section id="skills">
+  el.classList.add("hidden");
 
-    <h2 class="section-title">
-        skills.
-    </h2>
+  observer.observe(el);
 
-    <div class="skills-grid">
+});
 
-        <div class="skill-card">
-            <i class="fa-brands fa-html5"></i>
-            <h3>HTML</h3>
-        </div>
+// ================================
+// Typewriter Hero Effect
+// ================================
 
-        <div class="skill-card">
-            <i class="fa-brands fa-css3-alt"></i>
-            <h3>CSS</h3>
-        </div>
+const heroText =
+document.querySelector(".hero-description");
 
-        <div class="skill-card">
-            <i class="fa-brands fa-js"></i>
-            <h3>JavaScript</h3>
-        </div>
+if(heroText){
 
-        <div class="skill-card">
-            <i class="fa-brands fa-react"></i>
-            <h3>React</h3>
-        </div>
+  const text =
+  heroText.innerText;
 
-        <div class="skill-card">
-            <i class="fa-brands fa-java"></i>
-            <h3>Java</h3>
-        </div>
+  heroText.innerText = "";
 
-        <div class="skill-card">
-            <i class="fa-solid fa-cloud"></i>
-            <h3>Cloud</h3>
-        </div>
+  let index = 0;
 
-    </div>
+  function type(){
 
-</section>
+    if(index < text.length){
 
-<section id="contact">
+      heroText.innerText +=
+      text.charAt(index);
 
-    <h2 class="section-title">
-        let's connect.
-    </h2>
+      index++;
 
-    <div class="contact-cards">
+      setTimeout(type, 25);
 
-        <div class="contact-card">
-            <h3>Email</h3>
-            <p>samikshahk2005@gmail.com</p>
-        </div>
+    }
 
-        <div class="contact-card">
-            <h3>LinkedIn</h3>
-            <p>Connect with me professionally</p>
-        </div>
+  }
 
-        <div class="contact-card">
-            <h3>GitHub</h3>
-            <p>Explore my projects and code</p>
-        </div>
+  type();
 
-    </div>
-
-</section>
-
-<footer>
-    <p>© 2026 Samiksha Kalekar</p>
-</footer>
-
-</body>
-</html>
+}
 ```
