@@ -1,190 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Samiksha Kalekar | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-  />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samiksha Kalekar | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navigation -->
-  <header>
-    <nav class="navbar">
-      <h1 class="logo">Samiksha Kalekar</h1>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <!-- Hero Section -->
+<header>
+  <nav>
+    <div class="logo">Samiksha Kalekar</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
 <section class="hero">
-
-  <div class="hero-content">
-
-    <p class="hero-tag">
-      FRONTEND DEVELOPER • ENGINEERING STUDENT
-    </p>
-
-    <h1>
-      Samiksha<br>
-      Kalekar.
-    </h1>
-
-    <p class="subtitle">
-      Building responsive web experiences and continuously learning modern web technologies.
-    </p>
-
-    <div class="hero-buttons">
-
-      <a href="#projects" class="btn">
-        View Projects
-      </a>
-
-      <a href="resume.pdf" class="btn-outline">
-        Resume
-      </a>
-
-    </div>
-
+  <div class="hero-text">
+    <p class="tag">FRONTEND DEVELOPER • ENGINEERING STUDENT</p>
+    <h1>Samiksha<br>Kalekar.</h1>
+    <p class="intro">Building clean, responsive and user-focused web experiences while continuously learning modern web technologies.</p>
   </div>
-
+  <div class="hero-image">
+    <img src="https://placehold.co/450x550" alt="Profile">
+  </div>
 </section>
 
-  <!-- About Section -->
-  <section id="about">
-
-  <h2 class="section-title">
-    about me.
-  </h2>
-
-  <div class="about-container">
-
-    <div class="about-text">
-
-      <p>
-        I'm a Computer Engineering student at PCCOE with a passion for frontend development and problem solving.
-      </p>
-
-      <p>
-        I enjoy building responsive websites using HTML, CSS, JavaScript and React while continuously improving my development skills.
-      </p>
-
-      <p>
-        Currently focused on React, DSA and placement preparation.
-      </p>
-
-    </div>
-
-  </div>
-
+<section id="about">
+  <h2>about me.</h2>
+  <p>I'm a Computer Engineering student passionate about frontend development, UI design and creating intuitive digital experiences. Currently focused on React, DSA and software engineering opportunities.</p>
 </section>
 
-  <!-- Education Section -->
-  <section id="education">
-    <h2 class="section-title">Education</h2>
-    <div class="edu-container">
-      <div class="edu-card">
-        <h3>Bachelor of Technology</h3>
-        <p><strong>Institution:</strong> Pimpri Chinchwad College of Engineering</p>
-        <p><strong>Year:</strong> 2023 – 2027</p>
-      </div>
-      <div class="edu-card">
-        <h3>Higher Secondary (12th Grade)</h3>
-        <p><strong>Institution:</strong> Dr D Y Patil Junior College</p>
-        <p><strong>Year:</strong> 2021 – 2023</p>
-      </div>
-    </div>
-  </section>
+<section id="projects">
+  <h2>featured projects.</h2>
 
-  <!-- Projects Section -->
-```html
-<div class="project-card">
+  <div class="card">
+    <h3>Homely Hub</h3>
+    <p>A responsive property listing platform designed to help users discover and explore homes through a clean and user-friendly interface.</p>
+  </div>
 
-  <h3>Homely Hub</h3>
+  <div class="card">
+    <h3>PCB Fault Detection System</h3>
+    <p>An AI-powered solution that analyzes PCB images to identify manufacturing defects using image processing and machine learning techniques.</p>
+  </div>
+</section>
 
-  <p>
-    A responsive home rental and property discovery platform designed to help users explore, search, and view residential properties through an intuitive and user-friendly interface.
-  </p>
+<section id="certifications">
+  <h2>certifications.</h2>
+  <ul class="certs">
+    <li>Generative AI</li>
+    <li>DSA in Java</li>
+    <li>Web Development</li>
+  </ul>
+</section>
 
-</div>
-
-<div class="project-card">
-
-  <h3>PCB Fault Detection System</h3>
-
-  <p>
-    An AI-powered system that analyzes PCB images to identify manufacturing defects and improve quality control through automated fault detection and classification.
-  </p>
-
-</div>
-```
-
-
-  <!-- Certifications Section -->
-  <section id="certifications">
-    <h2 class="section-title">Certifications</h2>
-    <div class="cert-container">
-      <div class="cert-card">
-        <i class="fa-solid fa-certificate"></i>
-        <h3>Gen AI</h3>
-        <p>
-          Generative Artificial Intelligence certification focusing on modern AI
-          technologies and applications.
-        </p>
-      </div>
-      <div class="cert-card">
-        <i class="fa-solid fa-certificate"></i>
-        <h3>DSA in Java</h3>
-        <p>
-          Data Structures and Algorithms certification with hands-on Java
-          implementation.
-        </p>
-      </div>
-      <div class="cert-card">
-        <i class="fa-solid fa-certificate"></i>
-        <h3>Web Development</h3>
-        <p>
-          Comprehensive web development training covering frontend and backend
-          technologies.
-        </p>
-      </div>
-    </div>
-  </section>
-
-
-  
-
- <!-- Contact Section -->
 <section id="contact">
-  <h2 class="section-title">Contact Me</h2>
-  <div class="contact-icons">
-    <a href="mailto:samikshahk2005@gmail.com" title="Email Me">
-      <i class="fa-solid fa-envelope"></i>
-    </a>
-    <a href="https://www.linkedin.com/in/samiksha-kalekar/" target="_blank" title="LinkedIn">
-      <i class="fa-brands fa-linkedin"></i>
-    </a>
-    <a href="https://github.com/" target="_blank" title="GitHub">
-      <i class="fa-brands fa-github"></i>
-    </a>
-  </div>
+  <h2>let's connect.</h2>
+  <p>Email: samikshahk2005@gmail.com</p>
 </section>
 
-  <footer>
-    <p>© 2025 Samiksha Kalekar</p>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
-
