@@ -1,14 +1,16 @@
 ```css
 :root{
-  --bg:#faf7f2;
-  --card:#ffffff;
-  --primary:#8B1E1E;
-  --primary-light:#b64a4a;
-  --text:#2f2f2f;
-  --muted:#777777;
-  --border:#eadfd8;
-}
+  --bg: #F8F4EE;
+  --card: #FFFDFB;
 
+  --primary: #8E3B3B;
+  --primary-light: #B36A6A;
+
+  --text: #433D3A;
+  --muted: #7A716C;
+
+  --border: #E7D9D0;
+}
 *{
   margin:0;
   padding:0;
@@ -76,18 +78,16 @@ header{
 
 /* ================= HERO ================= */
 
-.hero{
-  min-height:100vh;
+.hero h1{
+  font-family:'DM Serif Display', serif;
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  font-size:5.5rem;
 
-  padding:0 10%;
-}
+  line-height:.95;
 
-.hero-content{
-  max-width:900px;
+  color:var(--primary);
+
+  font-weight:400;
 }
 
 .hero-tag{
@@ -394,5 +394,12 @@ footer p{
 .nav-links a.active{
   color:var(--primary);
   font-weight:600;
+}
+@media(max-width:768px){
+
+  .hero h1{
+      font-size:3.5rem;
+  }
+
 }
 ```
