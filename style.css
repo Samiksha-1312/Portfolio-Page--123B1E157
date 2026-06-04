@@ -73,9 +73,9 @@ nav a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 80px;
+  gap: 60px;
   padding: 80px 8%;
-  min-height: 85vh;
+  min-height: 80vh;
 }
 
 .hero-text {
