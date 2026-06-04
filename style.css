@@ -67,99 +67,158 @@ nav a:hover {
 }
 
 /* ── HERO ── */
+/* HERO SECTION */
+
 .hero {
-  padding: 90px 8% 80px;
-  display: grid;
-  grid-template-columns: 1fr auto;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 60px;
-  min-height: 88vh;
-  background: var(--bg);
+  gap: 80px;
+  padding: 80px 8%;
+  min-height: 85vh;
 }
 
 .hero-text {
-  max-width: 580px;
+  flex: 1;
+  max-width: 600px;
 }
 
-.tag {
-  display: inline-block;
-  font-size: 0.7rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
+.hello {
   color: var(--accent);
-  font-weight: 600;
-  margin-bottom: 20px;
-  padding: 6px 14px;
-  border: 1px solid var(--accent);
-  border-radius: 2px;
+  font-size: 1rem;
+  margin-bottom: 12px;
 }
 
 .hero h1 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(3.5rem, 7vw, 6rem);
-  line-height: 0.92;
+  font-size: clamp(4rem, 7vw, 5.5rem);
   color: var(--primary);
-  font-weight: 700;
-  margin-bottom: 28px;
+  line-height: 1.05;
+  margin-bottom: 15px;
 }
 
-.hero h1 span {
+.role {
   color: var(--accent);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.line {
+  width: 80px;
+  height: 3px;
+  background: var(--primary);
+  margin-bottom: 25px;
 }
 
 .intro {
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: var(--text-muted);
-  max-width: 480px;
-  line-height: 1.85;
-  margin-bottom: 36px;
+  line-height: 1.9;
+  margin-bottom: 35px;
+}
+
+/* BUTTONS */
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
 .cta {
-  display: inline-flex;
-  align-items: center;
   background: var(--primary);
   color: #FDF0D5;
-  padding: 13px 28px;
-  border-radius: 3px;
+  padding: 14px 30px;
+  border-radius: 4px;
   text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  transition: background 0.2s;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
 .cta:hover {
   background: var(--accent);
 }
 
-/* ── HERO IMAGE ── */
+.resume-btn {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  padding: 14px 30px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.resume-btn:hover {
+  background: var(--primary);
+  color: #FDF0D5;
+}
+
+/* PROFILE IMAGE */
+
 .hero-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
+  flex-shrink: 0;
 }
 
 .hero-image img {
-  width: 320px;
-  height: 320px;
+  width: 420px;
+  height: 420px;
   object-fit: cover;
+  object-position: center top;
   border-radius: 50%;
   border: 6px solid var(--primary);
   display: block;
-  box-shadow: 0 10px 30px rgba(120, 0, 0, 0.15);
+  box-shadow: 0 15px 40px rgba(120, 0, 0, 0.15);
 }
 
-.img-accent {
+/* OUTER CIRCLE */
+
+.hero-image::before {
+  content: "";
   position: absolute;
-  bottom: -14px;
-  right: -14px;
-  width: 340px;
-  height: 420px;
+  width: 470px;
+  height: 470px;
   border: 2px solid var(--accent);
-  border-radius: 4px;
+  border-radius: 50%;
+  top: -25px;
+  left: -25px;
   z-index: -1;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 40px;
+    padding: 60px 6%;
+  }
+
+  .hero-image img {
+    width: 260px;
+    height: 260px;
+  }
+
+  .hero-image::before {
+    width: 300px;
+    height: 300px;
+    top: -20px;
+    left: -20px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+  }
 }
 
 /* ── DIVIDER ── */
