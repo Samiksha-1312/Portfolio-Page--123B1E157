@@ -333,16 +333,16 @@ section h2 {
 }
 
 .project-links a:last-child {
-  border: 1px solid var(--primary);
-  background: var(--primary);
+  border: 1px solid #FDF0D5;
   color: #FDF0D5;
+  background: transparent;
 }
 
 .project-links a:last-child:hover {
-  background: var(--primary);
+  background: transparent;
   color: #FDF0D5;
+  border-color: #FDF0D5;
 }
-
 /* ── CERTIFICATIONS ── */
 .certs-list {
   display: grid;
