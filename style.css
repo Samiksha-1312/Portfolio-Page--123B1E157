@@ -474,3 +474,86 @@ footer p {
     padding: 60px 6%;
   }
 }
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 28px;
+  margin-top: 40px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 32px;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent);
+  box-shadow: 0 10px 25px rgba(120,0,0,0.08);
+}
+
+.card-num {
+  font-size: 2.5rem;
+  color: rgba(120,0,0,0.12);
+  font-family: 'Cormorant Garamond', serif;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+
+.card-tag {
+  display: inline-block;
+  padding: 6px 12px;
+  background: rgba(193,18,31,0.08);
+  color: var(--accent);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.project-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.project-links a {
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.project-links a:first-child {
+  background: var(--primary);
+  color: #FDF0D5;
+}
+
+.project-links a:first-child:hover {
+  background: var(--accent);
+}
+
+.project-links a:last-child {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.project-links a:last-child:hover {
+  background: var(--primary);
+  color: #FDF0D5;
+}
