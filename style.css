@@ -338,8 +338,8 @@ section h2 {
 }
 
 .project-links a:last-child:hover {
-  background: var(--primary);
-  color: #FDF0D5;
+  background: transparent;
+  color: var(--primary);
 }
 
 /* ── CERTIFICATIONS ── */
