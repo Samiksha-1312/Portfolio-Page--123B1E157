@@ -334,12 +334,13 @@ section h2 {
 
 .project-links a:last-child {
   border: 1px solid var(--primary);
-  color: var(--primary);
+  background: var(--primary);
+  color: #FDF0D5;
 }
 
 .project-links a:last-child:hover {
-  background: transparent;
-  color: var(--primary);
+  background: var(--primary);
+  color: #FDF0D5;
 }
 
 /* ── CERTIFICATIONS ── */
