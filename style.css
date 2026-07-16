@@ -5,17 +5,17 @@
 }
 
 :root {
-  --bg: #FAF4F2;
+  --bg: #F0F4EE;
   --primary: #4E6137;
   --accent: #B56566;
   --accent-translucent: rgba(181, 101, 102, 0.08);
   --text: #2E302A;
   --text-muted: #5D6256;
-  --card: #FAF6F4;
+  --card: #FAF2F0;
   --border: #E3D5D2;
   --nav-bg: rgba(78, 97, 55, 0.9);
   --nav-text: rgba(250, 244, 242, 0.75);
-  --nav-text-hover: #FAF4F2;
+  --nav-text-hover: #F0F4EE;
   --shadow: 0 10px 30px rgba(78, 97, 55, 0.08);
   --timeline-line: #E3D5D2;
 }
@@ -505,7 +505,7 @@ section h2 {
 }
 
 .contact-link:hover {
-  background: #fff;
+  background: var(--bg);
 }
 
 /* ── FOOTER ── */
