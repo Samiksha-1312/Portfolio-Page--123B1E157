@@ -5,19 +5,19 @@
 }
 
 :root {
-  --bg: #F3F6E7;
+  --bg: #DDE5B6;
   --primary: #4E6137;
   --accent: #B56566;
   --accent-translucent: rgba(181, 101, 102, 0.08);
   --text: #2E302A;
   --text-muted: #5D6256;
   --card: #FAF2F0;
-  --border: #E3D5D2;
+  --border: #C8D1A3;
   --nav-bg: rgba(78, 97, 55, 0.9);
   --nav-text: rgba(250, 244, 242, 0.75);
-  --nav-text-hover: #F3F6E7;
+  --nav-text-hover: #DDE5B6;
   --shadow: 0 10px 30px rgba(78, 97, 55, 0.08);
-  --timeline-line: #E3D5D2;
+  --timeline-line: #C8D1A3;
 }
 
 html.dark {
