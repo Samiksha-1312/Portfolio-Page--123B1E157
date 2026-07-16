@@ -5,33 +5,35 @@
 }
 
 :root {
-  --bg: #FDF0D5;
-  --primary: #780000;
-  --accent: #C1121F;
-  --text: #1a0a0a;
-  --text-muted: #5a3030;
-  --card: #fff8ee;
-  --border: #d4a0a0;
-  --nav-bg: rgba(120, 0, 0, 0.9);
-  --nav-text: rgba(253, 240, 213, 0.75);
-  --nav-text-hover: #FDF0D5;
-  --shadow: 0 10px 30px rgba(120, 0, 0, 0.08);
-  --timeline-line: #d4a0a0;
+  --bg: #FAF4F2;
+  --primary: #4E6137;
+  --accent: #B56566;
+  --accent-translucent: rgba(181, 101, 102, 0.08);
+  --text: #2E302A;
+  --text-muted: #5D6256;
+  --card: #FAF6F4;
+  --border: #E3D5D2;
+  --nav-bg: rgba(78, 97, 55, 0.9);
+  --nav-text: rgba(250, 244, 242, 0.75);
+  --nav-text-hover: #FAF4F2;
+  --shadow: 0 10px 30px rgba(78, 97, 55, 0.08);
+  --timeline-line: #E3D5D2;
 }
 
 html.dark {
-  --bg: #0f0505;
-  --primary: #ff4d4d;
-  --accent: #ff3333;
-  --text: #fdf0d5;
-  --text-muted: #cfa8a8;
-  --card: #1c0e0e;
-  --border: #4a2222;
-  --nav-bg: rgba(15, 5, 5, 0.9);
-  --nav-text: rgba(253, 240, 213, 0.7);
-  --nav-text-hover: #ff4d4d;
+  --bg: #1A1E18;
+  --primary: #A8C78E;
+  --accent: #E09F9F;
+  --accent-translucent: rgba(224, 159, 159, 0.10);
+  --text: #FAF4F2;
+  --text-muted: #9EABA0;
+  --card: #22271E;
+  --border: #3E463A;
+  --nav-bg: rgba(26, 30, 24, 0.9);
+  --nav-text: rgba(250, 244, 242, 0.7);
+  --nav-text-hover: #A8C78E;
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  --timeline-line: #4a2222;
+  --timeline-line: #3E463A;
 }
 
 body, section, div, header, footer, a, .card, .cert-item, .skills-category, .timeline-content, h1, h2, h3, h4, p, span, button {
@@ -369,7 +371,7 @@ section h2 {
 .card-tag {
   display: inline-block;
   padding: 6px 12px;
-  background: rgba(193, 18, 31, 0.08);
+  background: var(--accent-translucent);
   color: var(--accent);
   border-radius: 4px;
   font-size: 0.75rem;
@@ -396,7 +398,7 @@ section h2 {
 
 .project-links a:first-child {
   background: var(--primary);
-  color: #FDF0D5;
+  color: var(--bg);
 }
 
 .project-links a:first-child:hover {
@@ -410,7 +412,7 @@ section h2 {
 
 .project-links a:last-child:hover {
   background: var(--primary);
-  color: #FDF0D5;
+  color: var(--bg);
 }
 /* ── CERTIFICATIONS ── */
 .certs-list {
@@ -473,16 +475,16 @@ section h2 {
 }
 
 .contact-inner h2 {
-  color: #FDF0D5;
+  color: var(--bg);
   margin-bottom: 12px;
 }
 
 .contact-inner .section-label {
-  color: rgba(253, 240, 213, 0.6);
+  color: rgba(250, 244, 242, 0.6);
 }
 
 .contact-inner p {
-  color: rgba(253, 240, 213, 0.7);
+  color: rgba(250, 244, 242, 0.7);
   max-width: 400px;
   font-size: 0.95rem;
 }
@@ -491,7 +493,7 @@ section h2 {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: #FDF0D5;
+  background: var(--bg);
   color: var(--primary);
   padding: 14px 28px;
   border-radius: 3px;
@@ -509,7 +511,7 @@ section h2 {
 /* ── FOOTER ── */
 footer {
   background: var(--primary);
-  border-top: 1px solid rgba(253, 240, 213, 0.15);
+  border-top: 1px solid rgba(250, 244, 242, 0.15);
   padding: 24px 8%;
   display: flex;
   justify-content: space-between;
@@ -517,12 +519,12 @@ footer {
 }
 
 footer p {
-  color: rgba(253, 240, 213, 0.5);
+  color: rgba(250, 244, 242, 0.5);
   font-size: 0.8rem;
 }
 
 .footer-name {
-  color: rgba(253, 240, 213, 0.8);
+  color: rgba(250, 244, 242, 0.8);
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.1rem;
 }
@@ -664,7 +666,7 @@ footer p {
   align-items: center;
   gap: 8px;
   padding: 8px 14px;
-  background: rgba(120, 0, 0, 0.03);
+  background: var(--accent-translucent);
   border: 1px solid var(--border);
   border-radius: 6px;
   font-size: 0.85rem;
@@ -674,12 +676,12 @@ footer p {
 }
 
 html.dark .skill-tag {
-  background: rgba(255, 77, 77, 0.04);
+  background: var(--accent-translucent);
 }
 
 .skill-tag:hover {
   background: var(--primary);
-  color: #FDF0D5;
+  color: var(--bg);
   border-color: var(--primary);
   transform: scale(1.05);
 }
@@ -824,15 +826,15 @@ html.dark .hero-image img {
   justify-content: center;
   width: 44px;
   height: 44px;
-  background: rgba(253, 240, 213, 0.1);
-  color: #FDF0D5;
+  background: rgba(250, 244, 242, 0.1);
+  color: var(--bg);
   border-radius: 50%;
   transition: all 0.3s ease;
-  border: 1px solid rgba(253, 240, 213, 0.2);
+  border: 1px solid rgba(250, 244, 242, 0.2);
 }
 
 .social-links a:hover {
-  background: #FDF0D5;
+  background: var(--bg);
   color: var(--primary);
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
