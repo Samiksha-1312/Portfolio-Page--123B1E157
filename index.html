@@ -6,6 +6,17 @@
   <title>Samiksha Kalekar | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>
+    // Inline script to prevent theme flashing on load
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+  <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -15,14 +26,27 @@
     <div class="logo">SK</div>
     <ul>
       <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
       <li><a href="#certifications">Certifications</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+      <!-- Sun Icon (visible in dark mode) -->
+      <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4"></circle>
+        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+      </svg>
+      <!-- Moon Icon (visible in light mode) -->
+      <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+      </svg>
+    </button>
   </nav>
 </header>
 
-<section class="hero">
+<section class="hero reveal-on-scroll">
   <div class="hero-text">
     <span class="tag">Frontend Developer &nbsp;·&nbsp; Engineering Student</span>
     <h1>Samiksha<br><span>Kalekar.</span></h1>
@@ -42,7 +66,7 @@
 
 <div class="divider"></div>
 
-<section id="about">
+<section id="about" class="reveal-on-scroll">
   <p class="section-label">About Me</p>
   <div class="about-grid">
     <div class="about-text">
@@ -55,7 +79,89 @@
 
 <div class="divider"></div>
 
-<section id="projects">
+<section id="skills" class="reveal-on-scroll">
+  <p class="section-label">Expertise</p>
+  <h2>skills & technologies.</h2>
+  <div class="skills-container">
+    
+    <div class="skills-category">
+      <h3>Languages</h3>
+      <div class="skills-list">
+        <span class="skill-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          Java
+        </span>
+        <span class="skill-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          JavaScript
+        </span>
+        <span class="skill-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          SQL
+        </span>
+      </div>
+    </div>
+
+    <div class="skills-category">
+      <h3>Frontend</h3>
+      <div class="skills-list">
+        <span class="skill-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          React.js
+        </span>
+        <span class="skill-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          HTML5
+        </span>
+        <span class="skill-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          CSS3
+        </span>
+      </div>
+    </div>
+
+    <div class="skills-category">
+      <h3>Backend & ML</h3>
+      <div class="skills-list">
+        <span class="skill-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          Node.js
+        </span>
+        <span class="skill-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          Express.js
+        </span>
+        <span class="skill-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          MongoDB
+        </span>
+        <span class="skill-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          Python & ML
+        </span>
+      </div>
+    </div>
+
+    <div class="skills-category">
+      <h3>Tools</h3>
+      <div class="skills-list">
+        <span class="skill-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          Git & GitHub
+        </span>
+        <span class="skill-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          VS Code
+        </span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="projects" class="reveal-on-scroll">
   <p class="section-label">Work</p>
   <h2>featured projects.</h2>
 
@@ -96,7 +202,47 @@
 
 <div class="divider"></div>
 
-<section id="certifications">
+<section id="education" class="reveal-on-scroll">
+  <p class="section-label">Journey</p>
+  <h2>education & experience.</h2>
+  <div class="timeline">
+    
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <span class="timeline-date">2023 - Present</span>
+        <h3>Bachelor of Engineering (B.E.)</h3>
+        <h4>Engineering Student</h4>
+        <p>Focusing on computer science fundamentals, frontend technologies, database management, data structures, and algorithms.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <span class="timeline-date">2024</span>
+        <h3>Web Development Certification</h3>
+        <h4>Hands-on Learning</h4>
+        <p>Acquired strong skills in responsive web design, JavaScript, DOM manipulation, and interactive user interfaces.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <span class="timeline-date">2024</span>
+        <h3>DSA & Problem Solving in Java</h3>
+        <h4>Self-paced Study</h4>
+        <p>Practicing data structures and algorithms, building solid analytical and problem-solving skills in Java.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="certifications" class="reveal-on-scroll">
   <p class="section-label">Credentials</p>
   <h2>certifications.</h2>
   <div class="certs-list">
@@ -132,16 +278,30 @@
   </div>
 </section>
 
-<section id="contact">
+<section id="contact" class="reveal-on-scroll">
   <div class="contact-inner">
     <div>
       <p class="section-label">Get In Touch</p>
       <h2>let's connect.</h2>
       <p>Open to internship and placement opportunities. Feel free to reach out!</p>
     </div>
-    <a class="contact-link" href="mailto:samikshahk2005@gmail.com">
-      samikshahk2005@gmail.com
-    </a>
+    <div class="contact-links">
+      <a class="contact-link" href="mailto:samikshahk2005@gmail.com">
+        samikshahk2005@gmail.com
+      </a>
+      <div class="social-links">
+        <a href="https://github.com/Samiksha-1312" target="_blank" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.646.64.699 1.026 1.592 1.026 2.683 0 3.842-2.337 4.687-4.565 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.137 20.162 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+          </svg>
+        </a>
+        <a href="https://linkedin.com/in/samiksha-kalekar" target="_blank" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
