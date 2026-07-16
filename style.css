@@ -614,13 +614,18 @@ footer p {
 }
 
 .skills-category {
-  background: var(--card);
-  border: 1px solid var(--border);
+  background: #DDE5B6;
+  border: 1px solid #C8D1A3;
   border-radius: 10px;
   padding: 24px;
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
+}
+
+html.dark .skills-category {
+  background: var(--card);
+  border-color: var(--border);
 }
 
 .skills-category::before {
@@ -649,10 +654,15 @@ footer p {
 .skills-category h3 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.5rem;
-  color: var(--primary);
+  color: #B56566;
   margin-bottom: 16px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid #C8D1A3;
   padding-bottom: 8px;
+}
+
+html.dark .skills-category h3 {
+  color: var(--primary);
+  border-bottom-color: var(--border);
 }
 
 .skills-list {
@@ -666,24 +676,32 @@ footer p {
   align-items: center;
   gap: 8px;
   padding: 8px 14px;
-  background: var(--accent-translucent);
-  border: 1px solid var(--border);
+  background: rgba(250, 242, 240, 0.6);
+  border: 1px solid #C8D1A3;
   border-radius: 6px;
   font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--text-muted);
+  font-weight: 600;
+  color: #B56566;
   transition: all 0.2s ease;
 }
 
 html.dark .skill-tag {
   background: var(--accent-translucent);
+  border-color: var(--border);
+  color: var(--text-muted);
 }
 
 .skill-tag:hover {
+  background: #B56566;
+  color: #F3F6E7;
+  border-color: #B56566;
+  transform: scale(1.05);
+}
+
+html.dark .skill-tag:hover {
   background: var(--primary);
   color: var(--bg);
   border-color: var(--primary);
-  transform: scale(1.05);
 }
 
 .skill-tag svg {
