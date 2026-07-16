@@ -394,23 +394,26 @@ section h2 {
   font-size: 0.85rem;
   font-weight: 600;
   transition: 0.3s;
+  background: var(--primary);
+  color: var(--bg);
+  border: 1px solid var(--primary);
+  display: inline-block;
 }
 
-.project-links a:first-child {
-  background: var(--primary);
+.project-links a:hover {
+  background: var(--accent);
+  border-color: var(--accent);
   color: var(--bg);
 }
 
-.project-links a:first-child:hover {
-  background: var(--accent);
-}
-
-.project-links a:last-child {
-  border: 1px solid var(--primary);
+/* Style the second button as outlined when there are multiple buttons */
+.project-links a:nth-child(n+2) {
+  background: transparent;
   color: var(--primary);
+  border: 1px solid var(--primary);
 }
 
-.project-links a:last-child:hover {
+.project-links a:nth-child(n+2):hover {
   background: var(--primary);
   color: var(--bg);
 }
