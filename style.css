@@ -614,18 +614,13 @@ footer p {
 }
 
 .skills-category {
-  background: #DDE5B6;
-  border: 1px solid #C8D1A3;
+  background: var(--card);
+  border: 1px solid var(--border);
   border-radius: 10px;
   padding: 24px;
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
-}
-
-html.dark .skills-category {
-  background: var(--card);
-  border-color: var(--border);
 }
 
 .skills-category::before {
@@ -654,15 +649,10 @@ html.dark .skills-category {
 .skills-category h3 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.5rem;
-  color: #B56566;
+  color: var(--accent);
   margin-bottom: 16px;
-  border-bottom: 1px solid #C8D1A3;
+  border-bottom: 1px solid var(--border);
   padding-bottom: 8px;
-}
-
-html.dark .skills-category h3 {
-  color: var(--primary);
-  border-bottom-color: var(--border);
 }
 
 .skills-list {
@@ -676,12 +666,12 @@ html.dark .skills-category h3 {
   align-items: center;
   gap: 8px;
   padding: 8px 14px;
-  background: rgba(250, 242, 240, 0.6);
-  border: 1px solid #C8D1A3;
+  background: var(--accent-translucent);
+  border: 1px solid var(--border);
   border-radius: 6px;
   font-size: 0.85rem;
   font-weight: 600;
-  color: #B56566;
+  color: var(--accent);
   transition: all 0.2s ease;
 }
 
